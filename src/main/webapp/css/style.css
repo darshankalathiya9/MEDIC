@@ -1213,6 +1213,8 @@ ul.blog_list.my-3 li {
 /* //comments */
 .leave-coment-form input[type="text"],
 .leave-coment-form input[type="email"],
+.leave-coment-form input[type="tel"],
+.leave-coment-form input[type="password"],
 .leave-coment-form textarea {
     outline: none;
     border: 1px solid #000;
@@ -1411,6 +1413,8 @@ h5.title-w3 {
 
 .contact-right-w3l input[type="text"],
 .contact-right-w3l input[type="email"],
+.contact-right-w3l input[type="tel"],
+.contact-right-w3l input[type="password"],
 .contact-right-w3l textarea,
 .contact-right-w3l select.form-control {
     font-size: 15px;
@@ -1528,7 +1532,7 @@ select.form-control:not([size]):not([multiple]) {
 /*--//gallery--*/
 /* appointment */
 .appoint-img {
-    background: url(../images/bg6.jpg) no-repeat left bottom fixed;
+    background: url(../images/bg6.jpg) no-repeat left bottom fixed; 
     float: left;
     width: 44%;
 }
@@ -1858,6 +1862,8 @@ label.col-form-label {
 
     .leave-coment-form input[type="text"],
     .leave-coment-form input[type="email"],
+    .leave-coment-form input[type="tel"],
+    .leave-coment-form input[type="password"],
     .leave-coment-form textarea {
         width: 100%;
     }
@@ -2207,6 +2213,8 @@ label.col-form-label {
 
     .contact-right-w3l input[type="text"],
     .contact-right-w3l input[type="email"],
+    .contact-right-w3l input[type="tel"],
+    .contact-right-w3l input[type="password"],
     .contact-right-w3l textarea,
     .contact-right-w3l select.form-control {
         font-size: 14px;

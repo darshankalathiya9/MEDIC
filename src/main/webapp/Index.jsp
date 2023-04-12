@@ -1,17 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<title>Medic Medical Category Bootstrap Responsive Web Template | Home :: W3layouts</title>
+	<title>Medic</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -82,7 +76,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- //social icons -->
 							<div class="col-6 header-top_w3layouts pl-3 text-lg-left text-center">
 								<p class="text-white">
-									<i class="fas fa-map-marker-alt mr-2"></i>Parma Via Modena,BO, Italy</p>
+									<i class="fas fa-map-marker-alt mr-2"></i>Bims Hospital, Kala Nala, Bhavnagar.</p>
 							</div>
 						</div>
 					</div>
@@ -90,13 +84,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="row">
 							<div class="col-lg-7 col-6 top-w3layouts">
 								<p class="text-white">
-									<i class="far fa-envelope-open mr-2"></i>
-									<a href="mailto:info@example.com" class="text-white">info@example.com</a>
+									<i class="far fa-envelope-open mr-2"></i><a href="mailto:dkwebdeveloper9@gmail.com" class="text-white">dkwebdeveloper9@gmail.com</a>
 								</p>
 							</div>
 							<div class="col-lg-5 col-6 header-w3layouts pl-4 text-lg-left">
 								<p class="text-white">
-									<i class="fas fa-phone mr-2"></i>+1 000263676</p>
+									<i class="fas fa-phone mr-2"></i>+91 9624360699</p>
 							</div>
 						</div>
 					</div>
@@ -114,7 +107,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="container">
 					<!-- logo -->
 					<h1>
-						<a class="navbar-brand font-weight-bold font-italic" href="index.html">
+						<a class="navbar-brand font-weight-bold font-italic" href="Index.jsp">
 							<span>M</span>edic
 							<i class="fas fa-syringe"></i>
 						</a>
@@ -127,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-lg-auto">
 							<li class="nav-item active mt-lg-0 mt-3">
-								<a class="nav-link" href="index.html">Home
+								<a class="nav-link" href="Index.jsp">Home
 									<span class="sr-only">(current)</span>
 								</a>
 							</li>
@@ -151,14 +144,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li class="nav-item mx-lg-4 my-lg-0 my-3">
 								<a class="nav-link" href="appointment.html">Appointment</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="contact.html">Contact Us</a>
-							</li>
 						</ul>
 						<!-- login -->
-						<a href="#" class="login-button ml-lg-5 mt-lg-0 mt-4 mb-lg-0 mb-3" data-toggle="modal" data-target="#exampleModalCenter1">
+							<a href="Patient-Login.jsp" class="login-button ml-lg-5 mt-lg-0 mt-4 mb-lg-0 mb-3">
 							<i class="fas fa-sign-in-alt mr-2"></i>Login</a>
 						<!-- //login -->
+						
+						<!-- Register -->
+							<a href="Patient-Registration.jsp" class="login-button ml-lg-5 mt-lg-0 mt-4 mb-lg-0 mb-3">
+							<i class="fas fa-sign-in-alt mr-2"></i>Register</a>
+						<!-- //Register -->
+						
 					</div>
 				</div>
 			</nav>
@@ -177,22 +173,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="modal-body">
 						<div class="login px-4 mx-auto mw-100">
 							<h5 class="text-center mb-4">Login Now</h5>
-							<form action="#" method="post">
+							<form action="PatientController" method="post">
 								<div class="form-group">
 									<label>Your Name</label>
-									<input type="text" class="form-control" name="name" placeholder="" required="">
+									<input type="text" class="form-control" name="Email" placeholder="" required="">
 								</div>
 								<div class="form-group">
 									<label class="mb-2">Password</label>
-									<input type="password" class="form-control" name="password" placeholder="" required="">
+									<input type="password" class="form-control" name="Password" placeholder="" required="">
 								</div>
-								<button type="submit" class="btn submit mb-4">Login</button>
+								<button type="submit" class="btn submit mb-4" name="action" value="Login">Login</button>
 								<p class="forgot-w3ls text-center pb-4">
 									<a href="#" class="text-white">Forgot your password?</a>
 								</p>
 								<p class="account-w3ls text-center pb-4">
 									Don't have an account?
-									<a href="#" data-toggle="modal" data-target="#exampleModalCenter2">Create one now</a>
+									<a href="#" data-toggle="modal" data-target="#exampleModalCenter2">Create New One ?</a>
 								</p>
 							</form>
 						</div>
@@ -213,24 +209,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="modal-body">
 						<div class="login px-4 mx-auto mw-100">
 							<h5 class="text-center mb-4">Register Now</h5>
-							<form action="#" method="post">
+							<form action="PatientController" method="post">
 								<div class="form-group">
-									<label>Your Name</label>
-									<input type="text" class="form-control" name="name" placeholder="" required="">
+									<label>Your Firstname</label>
+									<input type="text" class="form-control" name="FirstName" placeholder="" required="">
+								</div>
+								<div class="form-group">
+									<label>Your Surname</label>
+									<input type="text" class="form-control" name="LastName" placeholder="" required="">
+								</div>
+								<div class="form-group">
+									<label>Your gender</label>
+									<input type="text" class="form-control" name="Gender" placeholder="" required="">
+								</div>
+								<div class="form-group">
+									<label>Your Address</label>
+									<input type="text" class="form-control" name="Address" placeholder="" required="">
+								</div>
+								<div class="form-group">
+									<label>Your Mobile</label>
+									<input type="tel" class="form-control" name="Mobile" placeholder="" required="">
 								</div>
 								<div class="form-group">
 									<label>Email</label>
-									<input type="email" class="form-control" name="email" placeholder="" required="">
+									<input type="email" class="form-control" name="Email" placeholder="" required="">
 								</div>
 								<div class="form-group">
 									<label class="mb-2">Password</label>
-									<input type="password" class="form-control" name="password" id="password1" placeholder="" required="">
+									<input type="password" class="form-control" name="Password" id="password1" placeholder="" required="">
 								</div>
-								<div class="form-group">
-									<label>Confirm Password</label>
-									<input type="password" class="form-control" name="password" id="password2" placeholder="" required="">
-								</div>
-								<button type="submit" class="btn btn-primary submit mb-4">Register</button>
+								<button type="submit" class="btn btn-primary submit mb-4" name="action" value="Login">Login</button>
 								<p class="text-center pb-2">
 									<a href="#" class="text-white">By clicking Register, I agree to your terms</a>
 								</p>
@@ -545,7 +553,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row">
 					<div class="col-md-4 w3l-footer">
 						<h2 class="mb-sm-3 mb-2">
-							<a href="index.html" class="text-white font-italic font-weight-bold">
+							<a href="Index.jsp" class="text-white font-italic font-weight-bold">
 								<span>M</span>edic
 								<i class="fas fa-syringe ml-2"></i>
 							</a>
@@ -559,13 +567,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<ul class="list-unstyled">
 							<li>
 								<i class="fas fa-location-arrow float-left"></i>
-								<p class="ml-4">The company name
-									<span>Lorem ipsum dolor,</span>New York,Morris Park. </p>
+								<p class="ml-4">Bims Hospital, Kala Nala, Bhavnagar.</p>
 								<div class="clearfix"></div>
 							</li>
 							<li class="my-3">
 								<i class="fas fa-phone float-left"></i>
-								<p class="ml-4">1234567890</p>
+								<p class="ml-4">+91 9624360699</p>
 								<div class="clearfix"></div>
 							</li>
 							<li>
@@ -580,7 +587,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="nav-w3-l">
 							<ul class="list-unstyled">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="Index.jsp">Home</a>
 								</li>
 								<li class="mt-2">
 									<a href="about.html">About Us</a>
@@ -599,9 +606,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				<div class="border-top mt-5 pt-lg-4 pt-3 pb-lg-0 pb-3 text-center">
-					<p class="copy-right-grids mt-lg-1">© 2018 Medic. All Rights Reserved | Design by
-						<a href="https://w3layouts.com/" target="_blank">W3layouts</a>
-					</p>
+					<p class="copy-right-grids mt-lg-1">© 2023 MEDIC | All Rights Reserved | Design by DK</p>
 				</div>
 			</div>
 		</div>
